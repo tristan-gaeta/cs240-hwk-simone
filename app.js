@@ -1,7 +1,17 @@
-let wrd = 'yo'
+var game;
 
-let blue = new Button("blue", () => { console.log(wrd) })
-let red = new Button("red", () => { console.log(wrd) })
-let green = new Button("green", () => { console.log(wrd) })
-let yellow = new Button("yellow", () => { console.log(wrd) })
- 
+let playButton = document.getElementById("play");
+playButton.addEventListener("click",()=>{
+    if(!game){
+        let rounds;
+        try{
+            rounds = parseInt(document.getElementById("rounds").innerHTML)
+            if(rounds < 1){
+                rounds = 10
+            }
+        }catch{
+            rounds = 10;
+        }
+        game = new Game(rounds)
+    }
+})

@@ -2,6 +2,8 @@ class Button {
     constructor(color, pressFn) {
         this.color = color;
         this.node = document.getElementById(`${this.color}Sq`);
+        this.audio = new Audio();
+        this.audio.src = `./sounds/${this.color}.wav`;
 
         this.node.addEventListener("mouseover", () => { 
             this.setActive(true);
@@ -16,6 +18,7 @@ class Button {
         this.node.addEventListener("mouseup", () => {
             pressFn();
             this.setLit(false);
+            this.sound();
         });
     }
 
@@ -33,5 +36,9 @@ class Button {
         } else {
             this.node.classList.remove(`light${this.color}`)
         }
+    }
+
+    sound(){
+        this.audio.play()
     }
 }
