@@ -2,23 +2,20 @@ class Button {
     constructor(color, pressFn) {
         this.color = color;
         this.node = document.getElementById(`${this.color}Sq`);
-        this.audio = new Audio();
-        this.audio.src = `./sounds/${this.color}.wav`;
 
-        this.node.addEventListener("mouseover", () => { 
+        this.node.addEventListener("mouseover", () => {
             this.setActive(true);
         });
         this.node.addEventListener("mouseleave", () => {
             this.setActive(false)
             this.setLit(false)
         });
-        this.node.addEventListener("mousedown", ()=>{
+        this.node.addEventListener("mousedown", () => {
             this.setLit(true)
         });
         this.node.addEventListener("mouseup", () => {
             pressFn();
             this.setLit(false);
-            this.sound();
         });
     }
 
@@ -38,7 +35,9 @@ class Button {
         }
     }
 
-    sound(){
-        this.audio.play()
+    sound() {
+        let audio = new Audio(`./sounds/${this.color}.wav`);
+        return audio.play()
     }
+
 }

@@ -1,17 +1,14 @@
 var game;
 
 let playButton = document.getElementById("play");
-playButton.addEventListener("click",()=>{
-    if(!game){
-        let rounds;
-        try{
-            rounds = parseInt(document.getElementById("rounds").innerHTML)
-            if(rounds < 1){
-                rounds = 10
-            }
-        }catch{
-            rounds = 10;
-        }
-        game = new Game(rounds)
+playButton.addEventListener("click", () => {
+    let rounds = parseInt(document.getElementById("rounds").value)
+    if (!rounds || rounds < 1) {
+        rounds = 10;
+        document.getElementById("rounds").value = 10;
     }
+    document.body.style.backgroundColor = "black"
+    console.log(rounds)
+    game = new Game(rounds)
+
 })

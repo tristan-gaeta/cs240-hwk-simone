@@ -29,35 +29,35 @@ div {
     border: solid #eeeeee .5px;
 }
 .red {
-    border-radius: 250px 0px 0px 0px;
+    border-radius: 260px 0px 0px 0px;
     background-color: #ff0000;
 }
 .blue {
-    border-radius: 0px 250px 0px 0px;
+    border-radius: 0px 260px 0px 0px;
     background-color: #0000bb;
 }
 .green {
-    border-radius: 0px 0px 0px 250px;
+    border-radius: 0px 0px 0px 260px;
     background-color: forestgreen;
 }
 .yellow {
-    border-radius: 0px 0px 250px 0px;
+    border-radius: 0px 0px 260px 0px;
     background-color: goldenrod;
 }
 .lightred {
-    border-radius: 250px 0px 0px 0px;
+    border-radius: 260px 0px 0px 0px;
     background-color:hotpink;
 }
 .lightblue {
-    border-radius: 0px 250px 0px 0px;
+    border-radius: 0px 260px 0px 0px;
     background-color: lightblue;
 }
 .lightgreen {
-    border-radius: 0px 0px 0px 250px;
+    border-radius: 0px 0px 0px 260px;
     background-color: lightgreen;
 }
 .lightyellow {
-    border-radius: 0px 0px 250px 0px;
+    border-radius: 0px 0px 260px 0px;
     background-color: yellow;
 }
 .white {

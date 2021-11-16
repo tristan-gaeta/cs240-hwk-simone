@@ -18,4 +18,13 @@ class Sequences {
             console.log("Error")
         }
     }
+
+    static playthrough(audio){
+        audio.play()
+        return new Promise((resolve)=>{
+            audio.addEventListener("ended",()=>{
+                resolve();
+            })
+        });
+    }
 }
